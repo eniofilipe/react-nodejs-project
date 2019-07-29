@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
-class Button extends Component {
-    static defaultProps = {
-        title : 'Comportamento Padrao'
-    }
+const Button = (props) => {
 
-    static propTypes = {
-        title: PropTypes.string.isRequired
-    }
-    render(){
-        return (
-            <div>
-                {this.props.title}
-                {this.props.descricao}
-                <button onClick = {this.props.press} >{this.props.children}</button>
-            </div>
-            
-        );
-    }
-} 
+    return (
+        
+        <button onClick = {props.press} >{props.children}</button>
+        
+    );
+
+}
+
 
 export default Button;
